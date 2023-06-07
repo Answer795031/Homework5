@@ -21,7 +21,8 @@ public class Main {
         Объявите переменную clientOS, которая равна 0 или 1 (0 — iOS, 1 — Android).
          */
 
-        byte clientOS = 0;
+        // Способ 1 - switch-case
+        byte clientOS = 1;
 
         switch(clientOS){
             case 0:
@@ -32,6 +33,16 @@ public class Main {
                 break;
             default:
                 System.out.println("Неподдерживаемая OS");
+        }
+
+        // Способ 2 - if-else
+
+        boolean whatIsClientOS = clientOS == 1;
+
+        if(whatIsClientOS){
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else{
+            System.out.println("Установите версию приложения для iOS по ссылке");
         }
 
         System.out.println(" ");
