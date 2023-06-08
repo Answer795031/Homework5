@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -148,16 +150,25 @@ public class Main {
         Объявите целочисленную переменную deliveryDistance = 95, которая содержит дистанцию до клиента.
          */
 
-        short deliveryDistance = 95;
+        short deliveryDistance = 110;
+        byte timeToDeliverCoefficient;
 
         if(deliveryDistance <= 20){
-            System.out.println("Потребуется дней: 1");
+            timeToDeliverCoefficient = 1;
         } else if(deliveryDistance <= 60){
-            System.out.println("Потребуется дней: 2");
+            timeToDeliverCoefficient = 2;
         } else if(deliveryDistance <= 100){
-            System.out.println("Потребуется дней: 3");
+            timeToDeliverCoefficient = 3;
         } else{
-            System.out.println("Доставки нет");
+            timeToDeliverCoefficient = 0;
+        }
+
+        switch (timeToDeliverCoefficient){
+            case 0:
+                System.out.println("Доставки нет");
+                break;
+            default:
+                System.out.println("Потребуется дней: " + timeToDeliverCoefficient);
         }
 
         System.out.println(" ");
