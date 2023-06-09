@@ -24,7 +24,10 @@ public class Main {
          */
 
         // Способ 1 - switch-case
-        byte clientOS = 1;
+        int iOs = 0;
+        int android = 1;
+
+        int clientOS = iOs;
 
         switch(clientOS){
             case 0:
@@ -39,12 +42,12 @@ public class Main {
 
         // Способ 2 - if-else
 
-        boolean whatIsClientOS = clientOS == 1;
-
-        if(whatIsClientOS){
+        if(clientOS == 1){
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else{
+        } else if(clientOS == 0){
             System.out.println("Установите версию приложения для iOS по ссылке");
+        } else{
+            System.out.println("Неподдерживаемая OS");
         }
 
         System.out.println(" ");
@@ -70,7 +73,9 @@ public class Main {
          */
 
         short clientDeviceYear = 2015;
-        byte clientOS = 1;
+        int iOs = 0;
+        int android = 1;
+        int clientOS = android;
 
         if(clientDeviceYear < 2015){
             switch (clientOS){
@@ -96,8 +101,6 @@ public class Main {
             }
 
         }
-
-
 
         System.out.println(" ");
 
@@ -188,43 +191,28 @@ public class Main {
         Пропишите условие, при котором программа не будет выполняться (номер месяца больше 12).
          */
 
-        byte monthNumber = 13;
+        // Способ 1 - простой
+        byte monthNumber = 12;
         switch (monthNumber){
             case 1:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону зима");
-                break;
             case 2:
+            case 12:
                 System.out.println(monthNumber + "-й месяц принадлежит к сезону зима");
                 break;
             case 3:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону весна");
-                break;
             case 4:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону весна");
-                break;
             case 5:
                 System.out.println(monthNumber + "-й месяц принадлежит к сезону весна");
                 break;
             case 6:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону лето");
-                break;
             case 7:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону лето");
-                break;
             case 8:
                 System.out.println(monthNumber + "-й месяц принадлежит к сезону лето");
                 break;
             case 9:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону осень");
-                break;
             case 10:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону осень");
-                break;
             case 11:
                 System.out.println(monthNumber + "-й месяц принадлежит к сезону осень");
-                break;
-            case 12:
-                System.out.println(monthNumber + "-й месяц принадлежит к сезону зима");
                 break;
             default:
                 System.out.println("Такого месяца не существует");
