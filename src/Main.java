@@ -42,9 +42,9 @@ public class Main {
 
         // Способ 2 - if-else
 
-        if(clientOS == 1){
+        if(clientOS == android){
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if(clientOS == 0){
+        } else if(clientOS == iOs){
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else{
             System.out.println("Неподдерживаемая OS");
@@ -72,12 +72,13 @@ public class Main {
         Важно: вложенность больше двух этажей не допускается (условный оператор внутри условного оператора).
          */
 
-        short clientDeviceYear = 2015;
+        short clientDeviceYear = 2015;      // Фактический год выпуска
+        short checkYear = 2015;             // Год, с которым сравнивается фактический год выпуска (константа)
         int iOs = 0;
         int android = 1;
         int clientOS = android;
 
-        if(clientDeviceYear < 2015){
+        if(clientDeviceYear < checkYear){
             switch (clientOS){
                 case 0:
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
